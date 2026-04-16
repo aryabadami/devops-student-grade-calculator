@@ -1,15 +1,19 @@
-def calculate_grade(marks):
-    percentage = sum(marks) / len(marks)
+"""Student grade calculator module."""
+
+
+def calculate_grade(score_list):
+    """Calculate grade from a list of marks."""
+    percentage = sum(score_list) / len(score_list)
 
     if percentage >= 90:
         return "A"
-    elif percentage >= 75:
+    if percentage >= 75:
         return "B"
-    elif percentage >= 50:
+    if percentage >= 50:
         return "C"
     return "Fail"
 
 
 if __name__ == "__main__":
-    marks = [85, 90, 95]
-    print("Grade:", calculate_grade(marks))
+    student_marks = [85, 90, 95]
+    print("Grade:", calculate_grade(student_marks))
